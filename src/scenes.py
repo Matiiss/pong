@@ -20,7 +20,7 @@ def change_scene(scene: Scene, delay: int | None = None):
     if delay is None:
         pygame.event.post(event)
     else:
-        pygame.time.set_timer(event, delay)
+        pygame.time.set_timer(event, delay, loops=1)
 
 
 class SceneManager:
