@@ -7,7 +7,7 @@ class Game:
     def __init__(self, title: str = "Pong") -> None:
         pygame.init()
         self.screen = pygame.display.set_mode(
-            (settings.WIDTH, settings.HEIGHT), flags=pygame.SCALED
+            (settings.WIDTH, settings.HEIGHT), flags=pygame.SCALED, vsync=True
         )
         pygame.display.set_caption(title)
         pygame.display.set_icon(pygame.transform.scale_by(ball.Ball.image, 4))
